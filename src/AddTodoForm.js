@@ -1,5 +1,6 @@
 import React from 'react';
 import InputWithLabel from './InputWithLabel';
+import style from './AddTodoForm.module.css';
 
 
 function AddTodoForm({onAddTodo}) {
@@ -24,11 +25,13 @@ function AddTodoForm({onAddTodo}) {
 
     return(
         <div>
-            <form onSubmit={handleAddToDo} >
+            <form onSubmit={handleAddToDo}  className={style.form}>
                <InputWithLabel todoTitle={todoTitle} handleTitleChange={handleTitleChange} label={"Title"}> 
-                   Title
+                <p className={style.title}>New to do:</p>
                </InputWithLabel>
-                <button>Add</button>
+                <button className={style.buttonAdd}>
+                    add
+                </button>
             </form>         
         </div>
     );

@@ -1,0 +1,18 @@
+html {
+    background-color: #304D6D;
+    font-family: 'Nunito', sans-serif;
+}
+
+.container {
+    padding: 10px;
+    height: 100%;
+    color: #151217;
+
+  }
+
+  .title {
+      color: #fdfcdc;
+      display: flex;
+      justify-content: center;
+      font-size: 50px;
+  }
