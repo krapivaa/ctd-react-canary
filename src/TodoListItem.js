@@ -8,15 +8,22 @@
  */
 
 import React from 'react';
+import style from './TodoListItem.module.css';
 
 function TodoListItem({title, item, onRemoveTodo}) { //destructuring
 
     
     return (
         <React.Fragment>
-            <li>
-                {title}
-                <button type="button" onClick = {() => onRemoveTodo(item.id)}>Remove</button>
+            <li className={style.ListItem}>
+                <p>{title}</p>
+                <button 
+                    type="button"
+                    onClick = {() => onRemoveTodo(item.id)}
+                    className={style.ButtonRemove}
+                 >
+                   remove 
+                </button>
             </li>
         </React.Fragment>
     )

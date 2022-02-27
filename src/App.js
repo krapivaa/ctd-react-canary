@@ -6,6 +6,7 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
+import style from './App.module.css';
 
 
 const REACT_APP_AIRTABLE_API_KEY = process.env.REACT_APP_AIRTABLE_API_KEY;
@@ -114,12 +115,15 @@ function App() {
 
 
   return (
+    
     <Router>
-      <>
+      <div className={style.container}>
       
         <Switch>
-            <Route exact path="/">
-              <h1>Todo List</h1>
+            <Route exact path="/" >
+              
+              <h1 className={style.title}>Todo List</h1>
+              
               <AddTodoForm onAddTodo={addTodo} />
               {/* <p>
                 New todo: {newTodo}  
@@ -135,8 +139,9 @@ function App() {
               <h1>New Todo List</h1>
             </Route>
         </Switch>
-      </>
+      </div>
     </Router>
+    
   );
 }
 

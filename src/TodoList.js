@@ -1,5 +1,6 @@
 import React from 'react';
 import TodoListItem from './TodoListItem';
+import style from './TodoList.module.css';
 
 
 function TodoList(props) {
@@ -8,9 +9,17 @@ function TodoList(props) {
 
     return(
         <div>
-            <ul style={{ listStyle: 'none' }} >
+            <ul className={style.containerTodoList}>
                 {todoList.map(function (item){
-                    return (<TodoListItem key={item.id} title={item.title} item={item} onRemoveTodo={onRemoveTodo} />)
+                    return (
+                    <TodoListItem 
+                        key={item.id}
+                        title={item.title}
+                        item={item}
+                        onRemoveTodo={onRemoveTodo}
+                        className={style.item}
+                        
+                        />)
                 })}   
             </ul>
         </div>
