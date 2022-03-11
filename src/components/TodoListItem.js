@@ -9,6 +9,7 @@
 
 import React from 'react';
 import style from './TodoListItem.module.css';
+import PropTypes from 'prop-types';
 
 function TodoListItem({title, item, onRemoveTodo}) { //destructuring
 
@@ -28,5 +29,12 @@ function TodoListItem({title, item, onRemoveTodo}) { //destructuring
         </React.Fragment>
     )
 }
+
+TodoListItem.propTypes = {
+    title: PropTypes.string,
+    item: PropTypes.object,
+    onRemoveTodo: PropTypes.func
+ };
+ 
 
 export default TodoListItem;
